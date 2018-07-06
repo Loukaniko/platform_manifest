@@ -46,7 +46,7 @@
 	
 	<!-- Build -->
 	<remove-project name="AICP/build" path="build/make" />
-	<project path="build/make" name="Loukaniko/android_build" remote="github" revision="8.1" >
+	<project path="build/make" name="Loukaniko/build" remote="github" revision="8.1" >
     		<copyfile src="core/root.mk" dest="Makefile" />
     		<linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     		<linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -59,7 +59,7 @@
   	<project path="build/kati" name="LineageOS/android_build_kati" groups="pdk,tradefed" />
 
 	<remove-project name="AICP/build_soong" path="build/soong" />
-	<project path="build/soong" name="Loukaniko/android_build_soong" remote="github" revision="8.1" >
+	<project path="build/soong" name="Loukaniko/build_soong" remote="github" revision="8.1" >
     		<linkfile src="root.bp" dest="Android.bp" />
     		<linkfile src="bootstrap.bash" dest="bootstrap.bash" />
 	</project>
