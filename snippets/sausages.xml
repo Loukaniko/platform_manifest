@@ -20,7 +20,7 @@
 
 	<!--Core-->
   	<remove-project name="AICP/system_core" path="system/core" />
-	<project path="system/core" name="Loukaniko/system_core" remote="github" revision="opt-cm-15.1" />
+	<project path="system/core" name="Loukaniko/system_core" remote="github" revision="8.1" />
 
 	<!--Packages-->
 	<remove-project name="LineageOS/android_packages_apps_Snap" path="packages/apps/Snap" />
