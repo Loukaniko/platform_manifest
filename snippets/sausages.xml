@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+	<!--The <remove-project tag has to be on that form: 
+	<remove-project name="" path="" />
+	in order to make allow script for upstream automerge work-->
+
+	<!--Our spices-->
+	<project path="vendor/samsung" name="Loukaniko/proprietary_vendor_samsung" remote="github" revision="8.1" />
+	
+	<!--Device Tree-->
+	<remove-project name="AICP/device_qcom_sepolicy" path="device/qcom/sepolicy" />
+	<project path="device/qcom/sepolicy" name="Loukaniko/android_device_qcom_sepolicy" remote="github" revision="8.1" />
+	<project path="device/samsung/jf-common" name="Loukaniko/android_device_samsung_jf-common" remote="github" revision="8.1" />
+	<project path="device/samsung/jflte" name="Loukaniko/android_device_samsung_jflte" remote="github" revision="8.1" />
+	<project path="device/samsung/qcom-common" name="Loukaniko/android_device_samsung_qcom-common" remote="github" revision="8.1" />
+	
+	<!--Kernel-->
+        <project path="kernel/samsung/jf" name="Loukaniko/platform_kernel_samsung_jf" remote="github" revision="8.1" />
+
+	<!--Core-->
+  	<remove-project name="AICP/system_core" path="system/core" />
+	<project path="system/core" name="Loukaniko/system_core" remote="github" revision="opt-cm-15.1" />
+
+	<!--Packages-->
+	<remove-project name="LineageOS/android_packages_apps_Snap" path="packages/apps/Snap" />
+	<project path="packages/apps/Snap" name="Loukaniko/android_packages_apps_Snap" remote="github" revision="8.1" />
+	
+	<!--Telephony-->
+	<remove-project name="LineageOS/android_frameworks_opt_telephony" path="frameworks/opt/telephony" />
+	<remove-project name="LineageOS/android_packages_apps_CarrierConfig" path="packages/apps/CarrierConfig" />
+	<project path="frameworks/opt/telephony" name="Loukaniko/android_frameworks_opt_telephony" remote="github" revision="8.1" />
+	<project path="packages/apps/CarrierConfig" name="Loukaniko/android_packages_apps_CarrierConfig" remote="github" revision="8.1" />
+
+	<!--Toolchains-->
+	<!--Stock kernel-->
+        <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9-UBER" name="B--B/Custom_Toolchains" groups="pdk,linux,arm" remote="github" revision="arm-eabi-4.9-UBER" />
+	<!--ROM-->
+	<project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="JDCTeam/Custom_Toolchains" groups="pdk,linux,arm" remote="github" revision="arm-linux-androideabi-4.9-Linaro" />
+
+	<!--LineageOS untouched-->
+	<project name="LineageOS/android_device_qcom_common" path="device/qcom/common" remote="github" revision="lineage-15.1" />
+	<project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-15.1" />
+	<project name="LineageOS/android_external_stlport" path="external/stlport" remote="github" revision="lineage-15.1" />
+	<project name="LineageOS/android_hardware_samsung" path="hardware/samsung" remote="github" revision="lineage-15.1" />
+	
+	<!-- Build -->
+	<remove-project name="AICP/build" path="build/make" />
+	<project path="build/make" name="Loukaniko/android_build" remote="github" revision="8.1" >
+    		<copyfile src="core/root.mk" dest="Makefile" />
+    		<linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    		<linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    		<linkfile src="core" dest="build/core" />
+	        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+	        <linkfile src="target" dest="build/target" />
+    		<linkfile src="tools" dest="build/tools" />
+  	</project>
+  	<project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" remote="aosp" />
+  	<project path="build/kati" name="LineageOS/android_build_kati" groups="pdk,tradefed" />
+
+	<remove-project name="AICP/build_soong" path="build/soong" />
+	<project path="build/soong" name="Loukaniko/android_build_soong" remote="github" revision="8.1" >
+    		<linkfile src="root.bp" dest="Android.bp" />
+    		<linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+	</project>
+
+
+
+	
+
+
+</manifest>
