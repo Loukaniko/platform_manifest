@@ -10,7 +10,7 @@
 	
 	<!--Device Tree-->
 	<remove-project name="AICP/device_qcom_sepolicy" path="device/qcom/sepolicy" />
-	<project path="device/qcom/sepolicy" name="Loukaniko/android_device_qcom_sepolicy" remote="github" revision="8.1" />
+	<project path="device/qcom/sepolicy" name="Loukaniko/device_qcom_sepolicy" remote="github" revision="8.1" />
 	<project path="device/samsung/jf-common" name="Loukaniko/android_device_samsung_jf-common" remote="github" revision="8.1" />
 	<project path="device/samsung/jflte" name="Loukaniko/android_device_samsung_jflte" remote="github" revision="8.1" />
 	<project path="device/samsung/qcom-common" name="Loukaniko/android_device_samsung_qcom-common" remote="github" revision="8.1" />
