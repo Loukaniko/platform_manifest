@@ -27,6 +27,10 @@
   	<remove-project name="AICP/system_core" path="system/core" />
 	<project path="system/core" name="Loukaniko/system_core" remote="github" revision="8.1" />
 
+	<!--fw/base-->
+	<remove-project name="AICP/frameworks_base" path="frameworks/base" />
+	<project path="frameworks/base" name="Loukaniko/frameworks_base" remote="github" revision="8.1" />
+	
 	<!--Packages-->
 	<remove-project name="LineageOS/android_packages_apps_Snap" path="packages/apps/Snap" />
 	<project path="packages/apps/Snap" name="Loukaniko/packages_apps_Snap" remote="github" revision="8.1" />
