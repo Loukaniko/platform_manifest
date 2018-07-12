@@ -5,10 +5,7 @@ Need a BBQ ?
 Download the Source
 ===================
 
-Initializing Repository
------------------------
-
 Repo initialization:
 
-     repo init -u https://github.com/Loukaniko/platform_manifest.git -b 8.1
+    repo init -u https://github.com/Loukaniko/platform_manifest.git -b 8.1
 
