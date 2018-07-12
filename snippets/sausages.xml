@@ -11,7 +11,9 @@
 	<!--Vendors-->
 	<remove-project name="AICP/vendor_aicp" path="vendor/aicp" />
 	<project path="vendor/aicp" name="Loukaniko/vendor_aicp" remote="github" revision="8.1" />
-	<project path="vendor/barbeque" name="Loukaniko/vendor_barbeque" remote="github" revision="8.1" />
+	<project path="vendor/barbeque" name="Loukaniko/vendor_barbeque" remote="github" revision="8.1" >
+		<copyfile src="build.sh" dest="build.sh" />
+	</project>
 	
 	<!--Device Tree-->
 	<remove-project name="AICP/device_qcom_sepolicy" path="device/qcom/sepolicy" />
